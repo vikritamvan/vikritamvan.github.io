@@ -51,7 +51,7 @@ $files = array_filter(scandir('uploads'), function($file) {
 <?php elseif (!isset($_POST['files'])): ?>
     <?php $jumlah = intval($_POST['jumlah']); ?>
     <div class="message bot">Silakan pilih tepat <?php echo $jumlah; ?> saham dari daftar berikut:</div>
-    <form method="POST" action="calculate_simulated.php" onsubmit="return validateForm();">
+    <form method="POST" action="calculate_simulated.html" onsubmit="return validateForm();">
         <?php
         foreach ($files as $file) {
             echo "<input type='checkbox' name='files[]' value='$file'> $file<br>";
